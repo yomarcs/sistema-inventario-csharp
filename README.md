@@ -1,161 +1,321 @@
-# 📦 Sistema de Gestión de Inventario
+# 📦 Sistema de Inventario Básico
 
 ![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=for-the-badge&logo=dotnet)
-![C#](https://img.shields.io/badge/C%23-12.0-239120?style=for-the-badge&logo=csharp)
+![C%23](https://img.shields.io/badge/C%23-12.0-239120?style=for-the-badge&logo=csharp)
 ![Status](https://img.shields.io/badge/Status-Completado-brightgreen?style=for-the-badge)
 
-Aplicación de consola para gestionar el inventario de un negocio. Permite registrar productos por categoría, controlar el stock, buscar por distintos criterios y obtener reportes del estado del inventario.
+Aplicación de consola desarrollada en C# para gestionar un inventario básico de productos.
 
----
+Permite registrar productos, mostrar información almacenada, buscar productos y calcular el valor total del inventario.
 
-## 📋 Descripción
+- - -
 
-Este proyecto fue construido como parte de mi camino de aprendizaje en **C# y .NET**, al terminar los fundamentos del lenguaje. El objetivo fue aplicar de forma integrada los conceptos aprendidos: clases, OOP, colecciones, interfaces y buenas prácticas de organización de código.
+# 📋 Descripción
 
-El sistema simula el backend de un sistema de inventario real, con operaciones CRUD completas, validaciones en el modelo y una interfaz de usuario de consola limpia y navegable.
+Este proyecto fue construido como parte del aprendizaje del **Bloque 1 - Fundamentos de C#**.
 
----
+El objetivo fue aplicar todos los conceptos fundamentales aprendidos durante los ejercicios anteriores y unirlos en un pequeño sistema funcional.
 
-## ✨ Funcionalidades
+El programa simula un inventario sencillo utilizando estructuras básicas del lenguaje.
 
-- ✅ Listar todos los productos con formato de tabla alineado
-- ✅ Agregar productos con validación de datos en tiempo real
-- ✅ Buscar producto por ID o por nombre (búsqueda parcial)
-- ✅ Actualizar stock (entrada de mercadería / salida por venta)
-- ✅ Eliminar producto con confirmación previa
-- ✅ Filtrar productos por categoría
-- ✅ Alertas de stock bajo configurables
-- ✅ Resumen del inventario con valor total y top 3 más caros
-- ✅ IDs autogenerados y fecha de ingreso automática
-- ✅ Mensajes de error, éxito y aviso con colores diferenciados
+En este proyecto se aplican:
 
----
+* Variables 
+* Tipos de datos
+* Arrays
+* Métodos
+* Parámetros
+* Condicionales
+* Switch
+* Ciclos
 
-## 🛠️ Tecnologías utilizadas
+- - -
 
-- **Lenguaje:** C# 12
-- **Plataforma:** .NET 8
-- **Tipo de proyecto:** Aplicación de consola
+# ✨ Funcionalidades
 
----
+* ✅ Registrar productos
+* ✅ Guardar nombre, precio y cantidad
+* ✅ Mostrar todos los productos registrados
+* ✅ Buscar productos por nombre
+* ✅ Calcular valor total del inventario
+* ✅ Menú interactivo por consola
+* ✅ Controlar límite máximo de productos
 
-## 📁 Estructura del proyecto
+- - -
+
+# 🛠️ Tecnologías utilizadas
+
+* **Lenguaje:** C# 12
+* **Plataforma:** .NET 8
+* **Tipo de proyecto:** Aplicación de consola
+
+- - -
+
+# 📁 Estructura del proyecto
 
 ```
-SistemaInventario/
+MiniProyectoInventarioBasico/
+
 │
-├── src/
-│   ├── Models/
-│   │   ├── Producto.cs        ← Modelo con encapsulación y validaciones
-│   │   └── Categoria.cs       ← Modelo de categoría
-│   │
-│   ├── Interfaces/
-│   │   └── IInventarioRepositorio.cs  ← Contrato del repositorio
-│   │
-│   ├── Services/
-│   │   └── InventarioRepositorio.cs   ← Implementación en memoria
-│   │
-│   └── UI/
-│       └── Menu.cs            ← Interfaz de usuario de consola
+├── Program.cs
 │
-├── Program.cs                 ← Punto de entrada y composición
-├── SistemaInventario.csproj
-└── README.md
+├── README.md
+│
+├── notas.md
+│
+├── recursos/
+│   └── conceptos.md
+│
+└── reto.md
 ```
 
----
+- - -
 
-## 🚀 Cómo ejecutar el proyecto
+# 🚀 Cómo ejecutar el proyecto
 
-### Requisitos previos
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+## Requisitos previos
 
-### Pasos
+Tener instalado:
 
-1. Clona el repositorio
-```bash
-git clone https://github.com/tuusuario/sistema-inventario-csharp.git
+* .NET SDK 8
+
+Descarga:
+
+https://dotnet.microsoft.com/download/dotnet/8.0
+
+- - -
+
+## Pasos
+
+Clonar repositorio:
+
+``` bash
+git clone https://github.com/tuusuario/curso-csharp.git
 ```
 
-2. Entra a la carpeta
-```bash
-cd sistema-inventario-csharp
+Ingresar a la carpeta:
+
+``` bash
+cd mini-proyecto-inventario-basico
 ```
 
-3. Ejecuta el proyecto
-```bash
+Ejecutar:
+
+``` bash
 dotnet run
 ```
 
----
+- - -
 
-## 🖥️ Capturas del sistema
+# 🖥️ Ejecución del sistema
 
 ```
-══════════════════════════════════════════════════
-  SISTEMA DE GESTIÓN DE INVENTARIO
-══════════════════════════════════════════════════
+==============================
 
-  1. 📋 Ver todos los productos
-  2. ➕ Agregar producto
-  3. 🔍 Buscar producto
-  4. 📦 Actualizar stock
-  5. 🗑️  Eliminar producto
-  6. 🏷️  Ver por categoría
-  7. ⚠️  Stock bajo
-  8. 📊 Resumen del inventario
-  9. 🚪 Salir
-──────────────────────────────────────────────────
-  Selecciona una opción:
+ SISTEMA DE INVENTARIO BÁSICO
+
+==============================
+
+
+1. Registrar producto
+
+2. Mostrar productos
+
+3. Buscar producto
+
+4. Valor total inventario
+
+5. Salir
+
+
+Seleccione una opción:
 ```
 
----
+- - -
 
-## 🏗️ Decisiones de diseño
+# Ejemplo de registro
 
-### ¿Por qué una interfaz `IInventarioRepositorio`?
-El menú depende de la interfaz, no de la implementación concreta. Hoy los datos viven en memoria — mañana se puede crear `InventarioRepositorioSQL` que implemente la misma interfaz y el resto del programa no cambia ni una línea.
+```
+Seleccione una opción: 1
 
-### ¿Por qué `Dictionary` en vez de `List` para almacenar?
-La búsqueda por ID es la operación más frecuente. `Dictionary<int, Producto>` la resuelve en O(1) — tiempo constante sin importar cuántos productos haya. Una `List` requeriría recorrer elemento por elemento.
 
-### ¿Por qué validar en el modelo y no en el menú?
-Las reglas de negocio (precio > 0, stock ≥ 0) pertenecen al modelo, no a la UI. Si mañana hay una API o un frontend distinto, las validaciones siguen funcionando sin duplicar código.
+Nombre producto:
+Laptop
 
----
 
-## 📚 Conceptos aplicados
+Precio:
+2500
 
-| Concepto | Dónde se aplica |
-|---|---|
-| Clases y objetos | `Producto`, `Categoria` |
-| Encapsulación | Setters con validación en `Producto` |
-| Interfaces | `IInventarioRepositorio` |
-| Colecciones | `Dictionary`, `List`, `IEnumerable` |
-| LINQ | `Where`, `OrderBy`, `FirstOrDefault`, `Sum`, `Take` |
-| Manejo de errores | `try/catch` en flujo de UI |
-| Método estático | `contadorId` para autogenerar IDs |
-| Dependency Injection | El menú recibe el repositorio por constructor |
 
----
+Cantidad:
+5
 
-## 🗺️ Próximos pasos (mejoras futuras)
 
-- [ ] Persistencia en archivo JSON
-- [ ] Persistencia en base de datos con Entity Framework Core
-- [ ] Exportar reporte a CSV
-- [ ] Historial de movimientos de stock
+Producto registrado correctamente.
+```
 
----
+- - -
 
-## 👤 Autor
+# Ejemplo mostrando inventario
+
+```
+===== PRODUCTOS =====
+
+
+1. Laptop | Precio: 2500 | Stock: 5
+
+2. Mouse | Precio: 50 | Stock: 20
+```
+
+- - -
+
+# 🏗️ Decisiones de diseño
+
+## ¿Por qué usar arrays?
+
+En este proyecto utilizamos arrays porque es una de las primeras estructuras aprendidas en C#.
+
+Ejemplo:
+
+``` csharp
+string[] productos;
+```
+
+Cada posición del array representa un producto.
+
+```
+Posición
+
+0 → Laptop
+
+1 → Mouse
+
+2 → Teclado
+```
+
+- - -
+
+## ¿Por qué separar el código en métodos?
+
+El programa podría estar completamente dentro de `Main()`.
+
+Sin embargo, separar responsabilidades permite crear código más organizado.
+
+Ejemplo:
+
+```
+MostrarMenu()
+
+RegistrarProducto()
+
+MostrarProductos()
+
+BuscarProducto()
+```
+
+Cada método tiene una función específica.
+
+- - -
+
+## ¿Por qué todavía no usamos clases?
+
+Porque este proyecto pertenece al Bloque 1.
+
+Todavía no conocemos:
+
+* Clases
+* Objetos
+* Constructores
+* Encapsulación
+
+En el Bloque 2 este mismo proyecto evolucionará utilizando Programación Orientada a Objetos.
+
+- - -
+
+# 📚 Conceptos aplicados
+
+| Concepto | Aplicación |
+| -------- | ---------- |
+| Variables | Datos del producto |
+| Tipos de datos | string, int, double |
+| Arrays | Almacenamiento de productos |
+| if / else | Validaciones |
+| switch | Menú principal |
+| do while | Mantener funcionando el sistema |
+| for | Recorrer productos |
+| Métodos | Separar funcionalidades |
+| Parámetros | Enviar información a métodos |
+
+- - -
+
+# 📈 Evolución del proyecto
+
+Este proyecto continuará creciendo durante el roadmap:
+
+```
+BLOQUE 1
+
+Inventario Básico
+
+Arrays + Métodos
+
+
+        ↓
+
+
+BLOQUE 2
+
+Inventario POO
+
+Clases + Objetos + Encapsulación
+
+
+        ↓
+
+
+BLOQUE 3
+
+Inventario Profesional
+
+List<T> + LINQ + Interfaces
+
+
+        ↓
+
+
+ASP.NET CORE + ANGULAR
+
+Aplicación Web completa
+```
+
+- - -
+
+# 🗺️ Mejoras futuras
+
+* [ ] Crear clase Producto
+* [ ] Crear clase Categoría
+* [ ] Agregar propiedades
+* [ ] Implementar encapsulación
+* [ ] Guardar datos en archivos
+* [ ] Utilizar colecciones genéricas
+* [ ] Crear API REST
+
+- - -
+
+# 👤 Autor
 
 **Yomar**
-- GitHub: [@yomarcs](https://github.com/yomarcs)
-- Proyecto parte del roadmap: [Full Stack .NET + Angular](https://github.com/yomarcs)
 
----
+GitHub:
 
-## 📄 Licencia
+[@yomarcs](https://github.com/yomarcs)
 
-Este proyecto está bajo la licencia MIT.
+Proyecto parte del roadmap:
+
+**Full Stack .NET + Angular**
+
+- - -
+
+# 📄 Licencia
+
+Este proyecto está bajo licencia MIT.
